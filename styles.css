@@ -15,7 +15,7 @@
     height: 200px;
     pointer-events: none;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(247, 251, 191, 0.6), rgba(255, 0, 0, 0)60%); 
+    background: radial-gradient(circle, rgba(247, 251, 191, 0.4), rgba(255, 0, 0, 0)50%); 
     mix-blend-mode: overlay;
 }
 .hero{
@@ -58,7 +58,7 @@
     10%,40%,50%,80%,100%{
         filter: drop-shadow(0 0 10px rgba(255, 133, 0, 0.7)) 
                 drop-shadow(0 0 20px rgba(255, 133, 0, 0.5)) 
-                drop-shadow(0 0 32px rgba(255, 133, 0, 0.2));
+                drop-shadow(0 0 30px rgba(255, 133, 0, 0.2));
     }
     
 }
@@ -155,6 +155,7 @@
 }
 
 .bottom-hero{
+    padding-left:5%;
     margin-left: auto;
     margin-right: 5vw;
     margin-top: 20px;
@@ -229,7 +230,7 @@
 
 body{
     margin:0%;
-    font-family: 'Maven Pro';
+    font-family:'Maven Pro', 'Verdana', 'Arial';
     overflow-x: hidden;
     z-index: 1;
 }
@@ -237,11 +238,11 @@ body{
 .background{
     background-image: url(Images/background.png);
     background-position: center;
-    background-size: contain;
+    background-size:2500px;
     position: absolute;
     left: 0%;
     top:-30%;
-    width: 100vw;
+    width: 100%;
     height: 80%;
     z-index: -1;
 }
@@ -347,6 +348,7 @@ hr{
 }
 
 .navbar-links a:hover {
+    cursor: pointer;
     filter: drop-shadow(0 0 10px rgba(142, 202, 230, 0.8)) 
     drop-shadow(0 0 20px rgba(142, 202, 230, 0.6)) 
     drop-shadow(0 0 30px rgba(142, 202, 230, 0.4));
@@ -359,19 +361,22 @@ hr{
 
 .navbar-menu-lines-svg
 {
-    transition: 0.3s;
+    transition: filter 0.3s;
 }
 
 .navbar-menu-lines-svg:hover{
-    fill:rgb(255, 249, 77);
+    filter: drop-shadow(0 0 10px rgba(251, 133, 0, 0.8)) 
+    drop-shadow(0 0 20px rgba(251, 133, 0, 0.6)) 
+    drop-shadow(0 0 30px rgba(251, 133, 0, 0.4));
 }
 
 .side-menu{
-    width:0%;
+    transform: translateX(-100%);
+    width:100%;
     transition: 0.2s;
     z-index: 1000;
     flex-direction: column;
-    background-color: #219ebc;
+    background-color: #023047;
     position:fixed;
     top:70px;
     height: 100vh;
@@ -379,6 +384,7 @@ hr{
 }
 
 .side-menu h3{
+    color:white;
     margin-left: 5vw;
     font-size: 10vw;
     margin-top: 7vw;
@@ -387,6 +393,14 @@ hr{
 
 .side-menu a{
     text-decoration: none;
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+.side-menu a:hover{
+    filter: drop-shadow(0 0 10px rgba(142, 202, 230, 0.8)) 
+    drop-shadow(0 0 20px rgba(142, 202, 230, 0.6)) 
+    drop-shadow(0 0 30px rgba(142, 202, 230, 0.4));
 }
 
 .corner-vector{
@@ -436,7 +450,7 @@ hr{
     width:10vw;
     transform: translateY(-100%);
     z-index: 0;
-    animation: glow 5s linear infinite alternate;
+    animation: glow 10s linear infinite alternate;
     
 }
 
@@ -488,13 +502,12 @@ hr{
     align-items: center; 
     border-radius: 20px;
     z-index: 900;
-    transition: filter 1s;
+    transition: filter 0.5s;
 }
 
 .about-container:hover{
     filter: drop-shadow(0 0 10px rgba(33, 158, 188, 0.8)) 
-    drop-shadow(0 0 20px rgba(33, 158, 188, 0.6)) 
-    drop-shadow(0 0 30px rgba(33, 158, 188, 0.4));
+    drop-shadow(0 0 20px rgba(33, 158, 188, 0.6));
 }
 
 .about-container h1{
@@ -515,13 +528,12 @@ hr{
     height:35vw;
     border-radius: 20px;
     position: relative;
-    transition: filter 1s;
+    transition: filter 0.5s;
 }
 
 .skills-container-icons:hover{
     filter: drop-shadow(0 0 10px rgba(33, 158, 188, 0.8)) 
-    drop-shadow(0 0 20px rgba(33, 158, 188, 0.6)) 
-    drop-shadow(0 0 30px rgba(33, 158, 188, 0.4));
+    drop-shadow(0 0 20px rgba(33, 158, 188, 0.6));
 }
 
 .skills-container h1{
@@ -631,13 +643,12 @@ hr{
     margin-left: 4vw;
     margin-right: 4vw;
     border-radius: 20px;
-    transition: filter 1s;
+    transition: filter 0.5s;
 }
 
 .experience-picture:hover{
     filter: drop-shadow(0 0 10px rgba(33, 158, 188, 0.8)) 
-            drop-shadow(0 0 20px rgba(33, 158, 188, 0.6)) 
-            drop-shadow(0 0 30px rgba(33, 158, 188, 0.4));
+            drop-shadow(0 0 20px rgba(33, 158, 188, 0.6));
 }
 
 .MacChangers-pics{
@@ -649,13 +660,12 @@ hr{
     margin-right: 4vw;
     overflow: hidden;
     border-radius: 20px;
-    transition: filter 1s;
+    transition: filter 0.5s;
 }
 
 .MacChangers-pics:hover{
     filter: drop-shadow(0 0 10px rgba(33, 158, 188, 0.8)) 
-            drop-shadow(0 0 20px rgba(33, 158, 188, 0.6)) 
-            drop-shadow(0 0 30px rgba(33, 158, 188, 0.4));
+            drop-shadow(0 0 20px rgba(33, 158, 188, 0.6));
 }
 
 .MacChangers-pics-image{
@@ -728,7 +738,7 @@ hr{
     padding-bottom: 3%;
     padding-top: 3%;
     row-gap: 2vw;
-    transition: filter 1s;
+    transition: filter 0.5s;
 }
 
 .projects-container:hover{
@@ -751,7 +761,7 @@ hr{
     position: relative;
     display: flex;
     align-items: center;
-    padding-right: 2%;
+    padding-right: 1%;
     padding-left: 3%;
     width:80%;
     background-image: linear-gradient(45deg,  #fb8500, #fff703);
@@ -800,8 +810,8 @@ hr{
     overflow: hidden;
     width:40%;
     background-image: linear-gradient(45deg, #8ec3e6, #219EBC, #023047);
-    background-size: 300% 300%;
-    animation: gradientAnimation 15s ease infinite;
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
     border-radius: 20px;
     z-index: 1;
 }
@@ -815,8 +825,8 @@ hr{
     bottom: 0;
     left: 0;
     background-image: linear-gradient(45deg,#023047, #219EBC, #8ec3e6);
-    background-size: 300% 300%;
-    animation: gradientAnimation 15s ease infinite;
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
     z-index: -1;
     transition: opacity 0.5s linear;
     opacity: 0;
@@ -901,6 +911,18 @@ hr{
     margin-right: 3%;
 }
 
+#email-1:hover{
+    filter: drop-shadow(0 0 10px rgba(142, 202, 230, 0.8)) 
+    drop-shadow(0 0 20px rgba(142, 202, 230, 0.6)) 
+    drop-shadow(0 0 30px rgba(142, 202, 230, 0.4));
+}
+
+#email-2:hover{
+    filter: drop-shadow(0 0 10px rgba(142, 202, 230, 0.8)) 
+    drop-shadow(0 0 20px rgba(142, 202, 230, 0.6)) 
+    drop-shadow(0 0 30px rgba(142, 202, 230, 0.4));
+}
+
 
 .LinkedIn-container{
     display: flex;
@@ -911,8 +933,13 @@ hr{
 
 }
 
-.LinkedIn-icon{
+#LinkedIn-link:hover{
+    filter: drop-shadow(0 0 10px rgba(142, 202, 230, 0.8)) 
+    drop-shadow(0 0 20px rgba(142, 202, 230, 0.6)) 
+    drop-shadow(0 0 30px rgba(142, 202, 230, 0.4));
+}
 
+.LinkedIn-icon{
     width:70px; 
     height:auto;
 }
@@ -920,9 +947,10 @@ hr{
 .contact-section a{
     text-decoration: none;
     color: white;
+    transition: filter 0.5s;
 }
 
-#message{
+/* #message{
     width: 100%;
     height: 50px;
     font-family: 'Maven Pro';
@@ -930,11 +958,11 @@ hr{
     margin-bottom: 5px;
     resize: none;
     color: white;
-}
+} */
 
-input[type="submit"]{
+/* input[type="submit"]{
     font-size: 1.3rem;
-}
+} */
 
 footer{
     margin-top: 2%;
@@ -1032,6 +1060,15 @@ footer{
         height: auto;
     }
 
+    .corner-vector{
+        height: 20vw;
+    }
+
+    .about-lines-svg{
+        transform: translateY(200%);
+        height: 12vw;
+    }
+
     .mid-svg{
         display: none;
     }
@@ -1087,15 +1124,37 @@ footer{
     .experience-container-entry{
         flex-direction: column;
         position: relative;
-        overflow: hidden;
+        overflow: visible;
     }
 
     .experience-picture{
+        z-index: 10;
         width:100%;
-        
+    }
+
+    /* .experience-container-text-even:hover ~ .experience-picture{
+        filter: drop-shadow(0 0 10px rgba(33, 158, 188, 0.8)) 
+        drop-shadow(0 0 20px rgba(33, 158, 188, 0.6));
+    } */
+
+   
+    .experience-picture:has(+ .experience-container-text-even:hover) {
+        filter: drop-shadow(0 0 10px rgba(33, 158, 188, 0.8)) 
+        drop-shadow(0 0 20px rgba(33, 158, 188, 0.6));
+    }
+
+    .experience-container-text-odd:hover ~ .experience-picture{
+        filter: drop-shadow(0 0 10px rgba(33, 158, 188, 0.8)) 
+        drop-shadow(0 0 20px rgba(33, 158, 188, 0.6));
+    }
+
+    .experience-container-text-odd:hover ~ .MacChangers-pics{
+        filter: drop-shadow(0 0 10px rgba(33, 158, 188, 0.8)) 
+        drop-shadow(0 0 20px rgba(33, 158, 188, 0.6));
     }
 
     .MacChangers-pics{
+        z-index: 10;
         width:100%;
     }
 
@@ -1105,11 +1164,12 @@ footer{
     }
 
     .experience-container-text-even{
+        z-index: 15;
         position: absolute;
         width: 70%;
         height:100%;
         left: 0;
-        transform: translate(-7%);
+        transform: translate(-6.5%);
         display: flex;
         align-items: center;
         color: white;
@@ -1119,16 +1179,18 @@ footer{
         border-bottom-left-radius: 20px;
     }
 
-    .experience-container-text-even h3{
+    .experience-container-text-even h3, h2{
         margin-left: 5%;
+        margin-right: 2%;
     }
 
     .experience-container-text-odd{
+        z-index: 15;
         position: absolute;
         width: 70%;
         height:100%;
         right: 0;
-        transform: translate(7%);
+        transform: translate(6.5%);
         display: flex;
         align-items: center;
         padding-right: 4%;
@@ -1193,6 +1255,10 @@ footer{
         width: fit-content;
         background:none;
         transform: translate(-40%);
+    }
+
+    .project-column-2:hover::before{
+        opacity: 0;
     }
 
     .project-icon{

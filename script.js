@@ -62,35 +62,45 @@ function toggleSideBar(){
 
     console.log('Y Position:', yPosition);
 
-    if(yPosition == 0 && sideMenuVisible == false){
-       openSideMenu();
+    if(yPosition != 0 && sideMenuVisible == false)
+    {
+        scrollToSection("about").then(openSideMenu);
+
     }
 
-    else if (yPosition == 0 && sideMenuVisible == true){
+    else if(yPosition == 0 && sideMenuVisible == false){
+        openSideMenu();
+    }
+
+    else if (sideMenuVisible == true){
         closeSideMenu();
     }
     
 }
 
 function openSideMenu(){
-    document.getElementById("side-menu").style.width = "100%";
+    document.getElementById("side-menu").style.transform = "translateX(0%)";
     sideMenuVisible = true;
-    disableScroll();
+    document.body.style.overflow = 'hidden';
 }
 
 function closeSideMenu(){
-    document.getElementById("side-menu").style.width = "0%";
+    document.getElementById("side-menu").style.transform = "translateX(-100%)";
     sideMenuVisible =false;
     window.onscroll = null;
+    document.body.style.overflow = 'scroll';
 }
 
-function disableScroll(){
-    var x=window.scrollX;
-    var y=window.scrollY;
-    window.onscroll=function(){window.scrollTo(x, y);};
-}
+// function disableScroll(){
+//     var x=window.scrollX;
+//     var y=window.scrollY;
+//     window.onscroll=function(){window.scrollTo(x, y);};
+// }
+
 
 function scrollToSection(id){
+
+
     if (sideMenuVisible == true){
         closeSideMenu();
     }
@@ -98,9 +108,16 @@ function scrollToSection(id){
     var elementPosition = document.getElementById(id).getBoundingClientRect().top;
     var offsetPosition = elementPosition + window.scrollY - headerOffset;
   
-    window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
+
+
+    return new Promise((resolve) => {
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+        });
+
+        // Resolve the promise after scrolling completes
+        setTimeout(resolve, 500); // Adjust the timeout as needed
     });
 }
 
