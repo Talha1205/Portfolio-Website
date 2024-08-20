@@ -91,13 +91,6 @@ function closeSideMenu(){
     document.body.style.overflow = 'scroll';
 }
 
-// function disableScroll(){
-//     var x=window.scrollX;
-//     var y=window.scrollY;
-//     window.onscroll=function(){window.scrollTo(x, y);};
-// }
-
-
 function scrollToSection(id){
 
 
@@ -133,10 +126,6 @@ function scrollCircular() {
         images[i].style.right = String(Xradius * Math.cos(currentDegrees)) + "%";
         images[i].style.zIndex = String(Math.round(Yradius * Math.cos(currentDegrees)));
         images[i].style.filter = 'blur(' + (-1* blurScale * Math.cos(currentDegrees)) + 'px)';
-
-        //let glowIntensity = 100 * Math.exp(-10*Math.sin(0.5*currentDegrees)*Math.sin(0.5*currentDegrees));
-
-        //images[i].style.filter = "drop-shadow(0 0 " + glowIntensity + "px rgba(0, 255, 0, 1))";
 
         if(images[i].id == "Microcontroller Programming image"){
             images[i].style.height = String(23 + (heightScale * Math.cos(currentDegrees))) + "%";
@@ -186,12 +175,8 @@ const observer = new IntersectionObserver((entries) => {
         let currentImage = document.getElementById(entry.target.id + " image");
         if (entry.isIntersecting) {
             skillDesc.innerText = entry.target.id;
-            //currentImage.style.filter = "drop-shadow(0 0 20px #00e5ff) drop-shadow(0 0 40px #00e5ff) drop-shadow(0 0 60px #00e5ff) drop-shadow(0 0 100px #00e5ff)";
-
         }
-        // else{
-        //     currentImage.style.filter = "none";
-        // }
+
     });
     }, {
     root: scrollableElement,
@@ -231,7 +216,6 @@ let numberOfImages = images.length;
 let degreeSection = (2*Math.PI)/numberOfImages;
 
 let maxScroll = scrollableElement.scrollHeight - scrollableElement.offsetHeight;
-
 
 
 
