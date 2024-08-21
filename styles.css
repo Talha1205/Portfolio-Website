@@ -293,13 +293,6 @@ hr{
 }
 
 
-
-@media (min-width: 800px) and (max-width: 1000px) {
-    p{
-      font-size: 1rem;
-    }
-}
-
 .navbar-logo{
     display: flex;
     align-items:center;
@@ -505,6 +498,20 @@ hr{
     transition: filter 0.5s;
 }
 
+.about-container p{
+    font-size: 1.15rem;
+}
+
+
+@media (min-width: 800px) and (max-width: 1000px) {
+    h1{
+        font-size:2.2rem;
+    }
+    .about-container p{
+      font-size: 0.9rem;
+    }
+}
+
 .about-container:hover{
     filter: drop-shadow(0 0 10px rgba(33, 158, 188, 0.8)) 
     drop-shadow(0 0 20px rgba(33, 158, 188, 0.6));
@@ -525,7 +532,7 @@ hr{
 .skills-container-icons{
     background-color: #8ECAE6;
     width: 28vw;
-    height:35vw;
+    height:38vw;
     border-radius: 20px;
     position: relative;
     transition: filter 0.5s;
@@ -554,7 +561,13 @@ hr{
 #skills-image-container{
     position: relative;
     height: 95%;
-    transform: translate(-16%,30%);
+    transform: translate(-16%,26%);
+}
+
+@media (min-width: 800px) and (max-width: 1064px) {
+    #skills-image-container{
+        transform: translate(-16%,20%);
+    }
 }
 
 .skill-icons{
@@ -583,6 +596,7 @@ hr{
     height: 90%;
     overflow: scroll;
     cursor:ns-resize;
+    behavior: smooth;
     /* scroll-snap-type: y mandatory; */
 
 
@@ -592,10 +606,8 @@ hr{
     
 }
 
-
 .spacer {
     height: 80%;
-    /* scroll-snap-align: center;    */
 }
 
 
@@ -1007,6 +1019,10 @@ footer{
         width: 10vw;
     }
 
+    .about-container p{
+        font-size: 1.5rem;
+    }
+
     .experience-text-svg{
         width: 380px;
     }
@@ -1292,6 +1308,8 @@ footer{
     }
    
 }
+
+
 
 
 
