@@ -538,7 +538,6 @@ hr{
 
 .skills-container h1{
     text-align: center;
-    margin: 0px;
 }
 
 .skill-focus{
@@ -555,9 +554,7 @@ hr{
 #skills-image-container{
     position: relative;
     height: 95%;
-    transform: translate(-16%,38%);
-    /* overflow: scroll;
-    scroll-snap-type: y mandatory; */
+    transform: translate(-16%,30%);
 }
 
 .skill-icons{
@@ -715,16 +712,16 @@ hr{
 .left-project-pins{
     z-index: 0;
     position: absolute;
-    transform: translateX(-90%); 
-    height: 30vw;
+    transform: translateX(-91%); 
+    height: 55vw;
     width: auto;
 }
 
 .right-project-pins{
     z-index: 0;
     position: absolute;
-    transform: translateX(287%);
-    height: 30vw;
+    transform: translateX(307%);
+    height: 55vw;
     width: auto; 
 }
 
@@ -806,7 +803,7 @@ hr{
     display: flex;
     align-items: center;
     justify-content:flex-start;
-    padding-left: 5%;
+    padding-left: 2%;
     overflow: hidden;
     width:40%;
     background-image: linear-gradient(45deg, #8ec3e6, #219EBC, #023047);
@@ -1023,7 +1020,7 @@ footer{
     }
 
     .right-project-pins{
-        transform: translateX(242%);
+        transform: translateX(260%);
     }
 
     .project-icon{
@@ -1085,7 +1082,7 @@ footer{
     .skills-container{
         
         width: 100%;
-        height: 750px;
+        height: 800px;
     }
 
     .skills-vector{
@@ -1098,18 +1095,14 @@ footer{
     }
 
     #skills-image-container{
-        transform: translate(-30%, 33%);
+        transform: translate(-30%, 28%);
         
     }
 
     .skills-description{
         left:33%;
-        top:90%;
+        top:92%;
         font-size: 14pt;
-    }
-
-    .skill-icons{
-        height: 7%;
     }
 
     .skill-focus{
@@ -1233,7 +1226,7 @@ footer{
     }
 
     .right-project-pins{
-        transform: translateX(285%);
+        transform: translateX(300%);
     }
 
     .project-column-1
@@ -1297,6 +1290,10 @@ footer{
     }
    
 }
+
+
+
+
 
 
 
