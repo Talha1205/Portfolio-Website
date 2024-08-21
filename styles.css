@@ -1175,6 +1175,8 @@ footer{
     .experience-container-text-even h3, h2{
         margin-left: 5%;
         margin-right: 2%;
+        margin-bottom: 5%;
+        margin-top: 0%;
     }
 
     .experience-container-text-odd{
@@ -1226,7 +1228,7 @@ footer{
     }
 
     .right-project-pins{
-        transform: translateX(300%);
+        transform: translateX(313%);
     }
 
     .project-column-1
