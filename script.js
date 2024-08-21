@@ -119,7 +119,6 @@ function scrollCircular() {
         
     let currentDegrees = scrollableElement.scrollTop * (2*Math.PI)/maxScroll;
 
-
     for (let i = 0; i<numberOfImages; i++){
         currentDegrees += degreeSection;
         images[i].style.top = String(Yradius * Math.sin(currentDegrees)) + "%";
@@ -183,8 +182,8 @@ const observer = new IntersectionObserver((entries) => {
     threshold: 0.63 // Adjust threshold as needed
     });
 
-scrollItems.forEach(item => {
-    observer.observe(item);
+    scrollItems.forEach(item => {
+        observer.observe(item);
 });
 
 let isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
@@ -207,15 +206,15 @@ if(isTouchDevice){
 }
 
 
-let Yradius = 32;
+let maxScroll = scrollableElement.scrollHeight - scrollableElement.offsetHeight;
+
+let Yradius = 30;
 let Xradius = 12;
 let heightScale = 4;
 let startHeight = 20;
 let blurScale = 3;
 let numberOfImages = images.length;
 let degreeSection = (2*Math.PI)/numberOfImages;
-
-let maxScroll = scrollableElement.scrollHeight - scrollableElement.offsetHeight;
 
 
 
